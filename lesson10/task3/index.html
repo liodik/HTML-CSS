@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .header {
+        height: 40px;
+        background-color: yellow;
+        display: flex;
+        align-items: center;
+      }
+      .footer {
+        height: 40px;
+        background-color: green;
+        display: flex;
+      }
+      .nav-list {
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        padding: 0;
+      }
+      .nav-item {
+        margin-left: 16px;
+      }
+      .footer > span {
+        margin: auto;
+      }
+      .dashboard {
+        background-color: pink;
+        display: flex;
+        flex-grow: 1;
+      }
+      .dashboard > h2 {
+        margin: auto;
+      }
+      .sidebar {
+        display: flex;
+        width: 200px;
+        background-color: grey;
+        flex-direction: column;
+      }
+      .sidebar > h2 {
+        margin: 16px auto;
+      }
+      .news-list {
+        margin: 0;
+        padding: 0;
+      }
+      .news-list > li {
+        margin-left: 16px;
+        list-style-type: none;
+        height: 40px;
+        display: flex;
+      }
+      .news-list > li > span {
+        margin: auto 0;
+      }
+      .page {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      .content {
+        flex-grow: 1;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <nav class="navigation">
+          <ul class="nav-list">
+            <li class="nav-item">About</li>
+            <li class="nav-item">Products</li>
+            <li class="nav-item">Contacts</li>
+          </ul>
+        </nav>
+      </header>
+      <main class="content">
+        <section class="dashboard">
+          <h2>I can use Flexbox!!!</h2>
+        </section>
+        <aside class="sidebar">
+          <h2>News</h2>
+          <ul class="news-list">
+            <li><span>News 1</span></li>
+            <li><span>News 2</span></li>
+            <li><span>News 3</span></li>
+          </ul>
+        </aside>
+      </main>
+      <footer class="footer"><span>Footer</span></footer>
+    </div>
+  </body>
+</html>
