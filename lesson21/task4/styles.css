@@ -63,10 +63,10 @@ main {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-.nav-list-link {
   padding-left: 0.5em;
   padding-right: 0.5em;
+}
+.nav-list-link {
   text-decoration: none;
   color: white;
 }
