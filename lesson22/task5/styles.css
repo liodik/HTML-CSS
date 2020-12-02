@@ -15,22 +15,22 @@ body {
   text-align: center;
   background: linear-gradient(60deg, red, orange);
   color: white;
+  flex-grow: 0;
 }
-picture {
-  margin: auto;
-}
+
 img {
   max-width: 100%;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 8px 0px #00000033;
+  margin: auto;
 }
 
 main {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 .navigation {
   padding: 0.5em;
-  min-width: 0;
 }
 .section {
   padding: 0.5em;
@@ -55,6 +55,7 @@ main {
 .nav-list {
   padding: 0;
   list-style: none;
+  min-width: 0;
 }
 .nav-list-item {
   background-color: #808080;
@@ -75,14 +76,21 @@ main {
   background-color: #e5e5e5;
   padding: 0.5em;
   text-align: center;
+  flex-grow: 0;
 }
 
 @media screen and (min-width: 600px) {
   .main__navigation-section {
     display: flex;
+    width: 100%;
+    flex-grow: 1;
   }
-  .section {
-    width: 80vw;
+  .news {
+    flex-grow: 0;
+  }
+  .navigation {
+    width: 20vw;
+    flex-grow: 1;
   }
 }
 @media screen and (min-width: 900px) {
