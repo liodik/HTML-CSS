@@ -16,6 +16,9 @@ body {
   background: linear-gradient(60deg, red, orange);
   color: white;
 }
+picture {
+  margin: auto;
+}
 img {
   max-width: 100%;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
@@ -27,14 +30,11 @@ main {
 }
 .navigation {
   padding: 0.5em;
-  flex-grow: 1;
-  flex-basis: 0;
+  min-width: 0;
 }
 .section {
   padding: 0.5em;
   font-size: 1.25em;
-  flex-grow: 4;
-  flex-basis: 0;
 }
 .news {
   padding: 0.5em;
@@ -60,15 +60,16 @@ main {
   background-color: #808080;
   line-height: 2em;
   margin-bottom: 0.5em;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
 .nav-list-link {
   text-decoration: none;
   color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
 }
 .footer {
   background-color: #e5e5e5;
@@ -79,20 +80,19 @@ main {
 @media screen and (min-width: 600px) {
   .main__navigation-section {
     display: flex;
-    flex-grow: 2;
-    flex-basis: 0;
+  }
+  .section {
+    width: 80vw;
   }
 }
 @media screen and (min-width: 900px) {
   .main {
     flex-direction: row;
   }
-  .news {
-    flex-basis: 0;
-    flex-grow: 1;
+  .navigation {
+    width: 20vw;
   }
-  .main__navigation-section {
-    flex-grow: 5;
-    flex-basis: 0;
+  .section {
+    width: 60vw;
   }
 }
